@@ -1,4 +1,4 @@
-//1¹ø
+//1ë²ˆ
 /*
 #pragma warning(disable:4996)
 #include<stdio.h>
@@ -32,7 +32,7 @@ int main()
 	}
 	for (int i = 0; i < 10; i++)
 	{
-		printf("\n°á°ú%s", arr[i]);
+		printf("\nê²°ê³¼%s", arr[i]);
 	}
 	fclose(in_fp);
 	fclose(out_fp);
@@ -41,7 +41,7 @@ int main()
 
 
 
-//Æ÷ÀÎÅÍ ¹è¿­ const ÀÌ¿ë
+//í¬ì¸í„° ë°°ì—´ const ì´ìš©
 /*
 #include<stdio.h>
 int main() {
@@ -58,7 +58,7 @@ int main() {
 }
 */
 
-//Æ÷ÀÎÅÍ¹è¿­ µ¿ÀûÇÒ´ç ÀÌ¿ë ÀÌ°É·ÎÇÏ±â
+//í¬ì¸í„°ë°°ì—´ ë™ì í• ë‹¹ ì´ìš© ì´ê±¸ë¡œí•˜ê¸°
 /*
 #pragma warning(disable:4996)
 #include<stdio.h>
@@ -85,8 +85,8 @@ int main()
 			stop = 0;
 
 			//??
-			printf("\nÀÌ°Å?:%s", arr[1]);
-			//Áö±İ ÀÌºÎºĞÀÌ ¹®Á¦ ¿©±æ °íÃÄ¾ßÇÔ Áßº¹¹®Á¦ ¾î¶»°Ô ÇØ°á?&&³Ö¾î¼­??
+			printf("\nì´ê±°?:%s", arr[1]);
+			//ì§€ê¸ˆ ì´ë¶€ë¶„ì´ ë¬¸ì œ ì—¬ê¸¸ ê³ ì³ì•¼í•¨ ì¤‘ë³µë¬¸ì œ ì–´ë–»ê²Œ í•´ê²°?&&ë„£ì–´ì„œ??
 			if (strcmp(*arr,tmp)==0) {
 				stop = 1;
 				break;
@@ -106,7 +106,7 @@ int main()
 */
 
 
-//ÀÌ°Å
+//ì´ê±°
 /*
 #pragma warning(disable:4996)
 #include<stdio.h>
@@ -127,7 +127,7 @@ int main()
 		printf("%d", i);
 		printf("%s\n", tmp);
 
-		//Áö±İ ÀÌºÎºĞÀÌ ¹®Á¦ ¿©±æ °íÃÄ¾ßÇÔ Áßº¹¹®Á¦ ¾î¶»°Ô ÇØ°á?&&³Ö¾î¼­??
+		//ì§€ê¸ˆ ì´ë¶€ë¶„ì´ ë¬¸ì œ ì—¬ê¸¸ ê³ ì³ì•¼í•¨ ì¤‘ë³µë¬¸ì œ ì–´ë–»ê²Œ í•´ê²°?&&ë„£ì–´ì„œ??
 		for (int j = 0; j < i+1; j++)
 		{
 			if (arr[j]==tmp) {
@@ -164,19 +164,19 @@ int main()
 */
 
 
-//2¹ø 
+//2ë²ˆ 
 /*
 #pragma warning(disable:4996)
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-	//´Ü¾î ÀĞ¾î¿À±â
+	//ë‹¨ì–´ ì½ì–´ì˜¤ê¸°
 	FILE *fp = fopen("harray.txt", "r");
 	char buffer[100];
 	while (fscanf(fp, "%s", buffer) != EOF)
 	fclose(fp);
-	//´Ü¾îÀÇ ±æÀÌ Àç±â
+	//ë‹¨ì–´ì˜ ê¸¸ì´ ì¬ê¸°
 	int leng = 0;
 	for (int i = 0; i < 100; i++)
 	{
@@ -185,15 +185,15 @@ int main()
 		else
 			leng++;
 	}
-	printf("±æÀÌ:%d\n", leng);
+	printf("ê¸¸ì´:%d\n", leng);
 
-	//1À¸·ÎµÈ °Å ÀúÀå
+	//1ìœ¼ë¡œëœ ê±° ì €ì¥
 	int ans[100] = { 0 };
 	for (int i = 0; i < leng; i++)
 	{
 		ans[i] = 1;
 	}
-	//´Ü¾î ÀÖÀ¸¸é Ãâ·Â
+	//ë‹¨ì–´ ìˆìœ¼ë©´ ì¶œë ¥
 	int last = 0;
 			int stop = 0;
 
@@ -203,14 +203,14 @@ int main()
 		char check;
 		scanf("%c", &check);
 		printf("%c\n", check);
-		//´Ü¾î ÀÖ´ÂÁö Ã¼Å©
+		//ë‹¨ì–´ ìˆëŠ”ì§€ ì²´í¬
 		for (int i = 0; i < leng; i++)
 		{
-			//´Ü¾î ÀÖÀ¸¸é 2·Î µÇ°Ô
+			//ë‹¨ì–´ ìˆìœ¼ë©´ 2ë¡œ ë˜ê²Œ
 			if (check == buffer[i])
 				ans[i] = 2;
 		}
-		//º¸¿©ÁÖ±â
+		//ë³´ì—¬ì£¼ê¸°
 		for (int i = 0; i < leng; i++)
 		{
 			if (ans[i] == 2)
@@ -218,7 +218,7 @@ int main()
 			else
 				printf("*");
 		}
-		//¸ğµÎ Ã£¾Ò´ÂÁö Ã¼Å©
+		//ëª¨ë‘ ì°¾ì•˜ëŠ”ì§€ ì²´í¬
 		char stop1;
 		for (int i = 0; i < leng; i++)
 		{
@@ -226,9 +226,9 @@ int main()
 				end++;
 			if (end == leng)
 			{
-				printf("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+				printf("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 				scanf("%c", &stop1);
-				//ÀÌ°Å ¿Ö ¾È¸ØÃã????
+				//ì´ê±° ì™œ ì•ˆë©ˆì¶¤????
 				if (stop1 == 'n') {
 					break;
 				}
@@ -243,7 +243,7 @@ int main()
 }
 */
 
-//3¹ø 
+//3ë²ˆ 
 /*
 #pragma warning(disable:4996)
 #include<stdio.h>
